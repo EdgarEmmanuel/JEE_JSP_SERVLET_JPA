@@ -1,0 +1,22 @@
+body{
+	background:#48a7e0;
+	overflow:hidden;
+}
+	
+.body_tert{
+		width:50rem;
+		height:45rem;
+}
+
+.body_tert .right{
+margin-top:100px;
+	width:30rem;
+	height:34rem;
+	margin-left:420px;
+	background:white;
+	border-radius:10px;
+}
+
+.body_tert .right h1{
+	color:red;
+}
