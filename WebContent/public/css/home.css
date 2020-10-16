@@ -6,17 +6,33 @@ body{
 .body_tert{
 		width:50rem;
 		height:45rem;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		background:white;
+		margin:20px 200px;
+		border-radius:10px;
 }
 
 .body_tert .right{
-margin-top:100px;
-	width:30rem;
-	height:34rem;
-	margin-left:420px;
+	flex-basis:25%;
+	width:25rem;
+	height:40rem;
 	background:white;
-	border-radius:10px;
+	margin:10px 10px;
 }
 
-.body_tert .right h1{
-	color:red;
+
+.body_tert .left{
+	flex-basis:25%;
+	width:25rem;
+	height:40rem;
+	background:white;
+	margin:10px 10px;
 }
+
+.body_tert .left img{
+	margin-top:100px;
+}
+
+
