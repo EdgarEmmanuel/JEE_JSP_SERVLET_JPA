@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body{
 	background:#48a7e0;
-	overflow:hidden;
 }
 	
 .body_tert{
 		width:50rem;
-		height:45rem;
+		height:35rem;
 		display:flex;
 		align-items:center;
 		justify-content:center;
@@ -17,22 +18,42 @@ body{
 .body_tert .right{
 	flex-basis:25%;
 	width:25rem;
-	height:40rem;
+	height:20rem;
 	background:white;
-	margin:10px 10px;
+}
+
+.body_tert .right small{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.body_tert .right h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size:45px;
+	font-weight:bold;
+}
+
+.body_tert .right form input{
+	width:300px;
+	border:1px solid black;
+	border-radius:10px;
+	height:3rem;
+}
+
+.body_tert .right form input::placeholder{
+	font-family: 'Montserrat', sans-serif;
 }
 
 
 .body_tert .left{
 	flex-basis:25%;
 	width:25rem;
-	height:40rem;
+	height:20rem;
 	background:white;
-	margin:10px 10px;
+	
 }
 
 .body_tert .left img{
-	margin-top:100px;
+	margin-top:140px;
 }
 
 
