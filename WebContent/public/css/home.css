@@ -6,7 +6,7 @@ body{
 	
 .body_tert{
 		width:50rem;
-		height:35rem;
+		height:30rem;
 		display:flex;
 		align-items:center;
 		justify-content:center;
@@ -22,25 +22,40 @@ body{
 	background:white;
 }
 
-.body_tert .right small{
-	font-family: 'Montserrat', sans-serif;
+.body_tert .right form {
+	margin-top:45px;
 }
 
-.body_tert .right h2{
-	font-family: 'Montserrat', sans-serif;
-	font-size:45px;
-	font-weight:bold;
+.body_tert .right form input:focus{
+	border:1px solid #48a7e0;
+}
+
+.body_tert .right form input[type="submit"]{
+	background-color:#48a7e0;
+	margin-top:20px;
+	color:white;
+	border:1px solid #48a7e0;
+	width:300px;
+	height:1rem;
+	padding:20px 20px 20px 20px;
+	cursor:pointer;
 }
 
 .body_tert .right form input{
 	width:300px;
 	border:1px solid black;
 	border-radius:10px;
-	height:3rem;
+	height:2rem;
 }
 
 .body_tert .right form input::placeholder{
 	font-family: 'Montserrat', sans-serif;
+}
+
+.body_tert .right .message p{
+	color:red;
+	font-weight:bold;
+	font-family:'Montserrat', sans-serif;;
 }
 
 
@@ -49,11 +64,11 @@ body{
 	width:25rem;
 	height:20rem;
 	background:white;
-	
+	padding:0px 20px;
 }
 
 .body_tert .left img{
-	margin-top:140px;
+	width:20rem;
 }
 
 

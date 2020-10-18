@@ -11,6 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name="home",urlPatterns = {"/home"})
 public class HomeController extends HttpServlet {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7284579834108215355L;
+
+
 	@Override
 	public void init() throws ServletException {
 		
