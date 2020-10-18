@@ -7,24 +7,23 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css"  href=<c:out value="${base}public/css/home.css"/> />
 <link rel="shortcut icon" href=<c:out value="${base}asset/favicon.ico"/> type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" href=<c:out value="${base}asset/favicon.ico"/> type="image/x-icon">
-<title>HOME</title>
+<title>HOME | PAGE </title>
 </head>
 <body>
-	<div class="body_tert">
-		<div class="left">
-			<img src="${base}asset/logo_senForage.png" alt="forage image" />
-		</div>
-		<div class="right">
-			<form action="/connex" method="post">
-				<input type="text" placeholder="login" name="login" required/><br/><br/><br/>
-				<input type="password" placeholder="password" name="login" required/>
-				<input type="submit" value="SE CONNECTER" />
-			</form>
-			<div class="message">
-			 	<p>LOGIN OU MOT DE PASSE INCORRECTE(S)</p>
-			</div>
-		</div>
+	<div> INFORMATIONS 
+	<a href="tel:+221897676549"><i class="fa fa-phone" aria-hidden="true"></i>897676549</a>
 	</div>
+	<header>
+		<div class="brand">
+			<img src="${base}asset/logo_senForage.png" alt="sen forage" />
+		</div>
+		<div class="menu">
+			<a href="">VILLAGE</a>
+			<a href="">VILLAGE</a>
+			<a href="">DECONNEXION</a>
+		</div>
+	</header>
 </body>
 </html>
