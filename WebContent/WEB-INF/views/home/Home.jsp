@@ -26,5 +26,16 @@
 			<a href="">DECONNEXION</a>
 		</div>
 	</header>
+	
+	<main>
+		<div class="section-1">
+			<div class="left">
+				<p>WELCOME MR <br/> TALL FALL</p>
+			</div>
+			<div class="right">
+				<img src="${base}asset/admin.png" alt="admin sen forage"/>
+			</div>
+		</div>
+	</main>
 </body>
 </html>
