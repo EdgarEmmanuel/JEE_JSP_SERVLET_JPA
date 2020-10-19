@@ -26,7 +26,7 @@ public class HomeController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setAttribute("base", "http://localhost:8081/JEE_JSP_SERVLET_JPA/");
-		RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/home/Home.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/home/village.jsp");
 		rd.forward(req, resp);
 	}
 	
