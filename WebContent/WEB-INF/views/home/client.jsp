@@ -15,13 +15,14 @@
 <body>
 	<jsp:include page="../layout/layout.jsp"></jsp:include>
 	<main>
-		<form action="" method="post">
+		<form action="insert_client.act" method="post">
 			<input type="text" placeholder="nom" name="nom" required /><br/>
+			<input type="email" placeholder="email" name="email" required /><br/>
 			<input type="text" placeholder="prenom" name="prenom" required /><br/>
 			<input type="text" placeholder="addresse" name="addresse" required /><br/>
 			<input type="text" placeholder="telephone" name="telephone" required /><br/>
 			<input type="text" placeholder="village" required /><br/>
-			<select name="village"  required>
+			<select name="village" name="id_village"  required>
 			<c:forEach items="${villages}" var="village" >
 				<option value="${village.id}"><c:out value="${village.nom}"/></option>
 			</c:forEach>
