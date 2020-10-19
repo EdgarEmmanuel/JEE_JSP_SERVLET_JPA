@@ -15,7 +15,13 @@
 <body>
 	<jsp:include page="../layout/layout.jsp"></jsp:include>
 	<main>
-		
+		<form action="" method="post">
+			<input type="text" placeholder="libelle" required /><br/>
+			<input type="text" placeholder="localisation" required /><br/>
+			<div class="buttons">
+			<input type="submit" value="ENREGISTRER" /><input type="reset" value="ANNULER" />
+			</div>
+		</form>
 	</main>
 </body>
 </html>
