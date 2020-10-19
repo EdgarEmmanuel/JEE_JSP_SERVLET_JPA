@@ -32,6 +32,8 @@ public class PageServlet extends HttpServlet {
 		}else if(req.getServletPath().equalsIgnoreCase("/home.pages")) {
 			RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/home/Home.jsp");
 			rd.forward(req, resp);
+		}else if(req.getServletPath().equalsIgnoreCase("/")) {
+			
 		}
 	}
 }

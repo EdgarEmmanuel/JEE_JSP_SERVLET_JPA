@@ -10,4 +10,11 @@ public class EntityMana {
 		EntityManager em = emf.createEntityManager();
 		return em;
 	}
+	
+	public static void insert(Object ok) {
+		EntityManager em = EntityMana.getManager();
+		em.getTransaction().begin();
+		em.persist(ok);
+		em.getTransaction().commit();
+	}
 }

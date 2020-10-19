@@ -5,7 +5,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css"  href=<c:out value="${base}public/css/village.css"/> />
 <link rel="stylesheet" type="text/css"  href=<c:out value="${base}public/css/layout.css"/> />
 <link rel="shortcut icon" href=<c:out value="${base}asset/favicon.ico"/> type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,14 +13,6 @@
 </head>
 <body>
 	<jsp:include page="../layout/layout.jsp"></jsp:include>
-	<main>
-		<form action="village.act" method="post">
-			<input type="text" placeholder="libelle" name="libelle" required /><br/>
-			<input type="text" placeholder="localisation" name="localisation" required /><br/>
-			<div class="buttons">
-			<input type="submit" value="ENREGISTRER" /><input type="reset" value="ANNULER" />
-			</div>
-		</form>
-	</main>
+	<h1><c:out value="${message}" /></h1>
 </body>
 </html>

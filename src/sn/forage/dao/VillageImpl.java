@@ -15,7 +15,7 @@ public class VillageImpl implements IVillage {
 	public int insertVillage(Village vl) {
 		int val;
 		try {
-			em.persist(vl);
+			EntityMana.insert(vl);
 			val = 1;
 		} catch (Exception e) {
 			val =0;
