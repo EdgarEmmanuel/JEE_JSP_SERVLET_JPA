@@ -5,6 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import sn.forage.entities.Statut;
+import sn.forage.entities.User;
 import sn.forage.entities.Village;
 
 public class Test {
@@ -14,13 +15,16 @@ public class Test {
 		
 		em.getTransaction().begin();
 		
-		Village vl = new Village();
-		vl.setLocalisation("dakar");
-		vl.setNom("tattaguine");
+		User user = new User();
+		user.setEmail("admin@gmail.com");
+		user.setNom("seck");
+		user.setPasword("passer");
+		user.setPrenom("Seck");
+		user.setStatut(em.find(Statut.class, 1));
 		
 		
 		
-		em.persist(vl);
+		em.persist(user);
 		
 		
 		

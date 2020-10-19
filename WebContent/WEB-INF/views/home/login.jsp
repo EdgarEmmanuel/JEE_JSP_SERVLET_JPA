@@ -16,13 +16,13 @@
 			<img src="${base}asset/logo_senForage.png" alt="forage image" />
 		</div>
 		<div class="right">
-			<form action="/connex" method="post">
+			<form action="connex.connex" method="post">
 				<input type="text" placeholder="login" name="login" required/><br/><br/><br/>
-				<input type="password" placeholder="password" name="login" required/>
+				<input type="password" placeholder="password" name="password" required/>
 				<input type="submit" value="SE CONNECTER" />
 			</form>
 			<div class="message">
-			 	<p>LOGIN OU MOT DE PASSE INCORRECTE(S)</p>
+			 	<p>${message}</p>
 			</div>
 		</div>
 	</div>
