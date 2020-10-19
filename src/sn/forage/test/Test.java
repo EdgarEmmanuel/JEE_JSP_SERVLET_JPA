@@ -5,6 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import sn.forage.entities.Statut;
+import sn.forage.entities.Village;
 
 public class Test {
 	public static void main(String[] args) {
@@ -13,10 +14,14 @@ public class Test {
 		
 		em.getTransaction().begin();
 		
-		Statut st = new Statut();
-		st.setLibelle("administrateur");
+		Village vl = new Village();
+		vl.setLocalisation("dakar");
+		vl.setNom("tattaguine");
 		
-		em.persist(st);
+		
+		
+		em.persist(vl);
+		
 		
 		
 		em.getTransaction().commit();
