@@ -18,7 +18,7 @@
 	<main>
 		<div class="section-1">
 			<div class="left">
-				<p>WELCOME MR <br/> TALL FALL</p>
+				<p>WELCOME MR <br/><c:out  value="${nom_admin}" /> </p>
 			</div>
 			<div class="right">
 				<img src="${base}asset/admin.png" alt="admin sen forage"/>

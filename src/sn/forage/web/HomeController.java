@@ -15,7 +15,6 @@ import javax.servlet.http.HttpSession;
 import sn.forage.dao.IUser;
 import sn.forage.dao.UserImpl;
 import sn.forage.entities.User;
-import sn.forage.entities.Village;
 
 @WebServlet(name="home" , urlPatterns = {"/home","*.connex"})
 public class HomeController extends HttpServlet {
@@ -52,17 +51,32 @@ public class HomeController extends HttpServlet {
 		if(req.getServletPath().equalsIgnoreCase("/connex.connex")){
 				String login = req.getParameter("login");
 				String password = req.getParameter("password");
+				String role = req.getParameter("role");
 				
 				User user = null;
 				
-				user = iuser.getUserByParams(login, password);
-				
-				if(user!=null) {
-					pr.print("nom : "+user.getNom());
-				}else {
-					session.setAttribute("message", "LOGIN OU MOT DE PASSE INCORRECTE(S)");
-					resp.sendRedirect("home");
+				switch(role) {
+					case "administrateur":
+							user = iuser.getUserByParams(login, password);
+							
+							if(user!=null){
+								//set the session
+								session.setAttribute("nom_admin", user.getNom()+" "+user.getPrenom());
+								
+								/* resp.setHeader("Cache-Control", "no-cache");
+								resp.setHeader("Cache-Control", "no-store");
+								resp.setHeader("Pragma", "no-cache");
+								resp.setDateHeader("Expires", 0);*/
+								RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/home/Home.jsp");
+								rd.forward(req, resp);
+							}else{
+								session.setAttribute("message", "LOGIN OU MOT DE PASSE INCORRECTE(S)");
+								resp.sendRedirect("home");
+							}
+					break;
 				}
+		}else if(req.getServletPath().equalsIgnoreCase("/deconnex.connex")) {
+			pr.print("deconnexion");
 		}else{
 			resp.sendRedirect("home");
 		}

@@ -4,11 +4,11 @@
 	</div>
 	<header>
 		<div class="brand">
-			<img src="${base}asset/logo_senForage.png" alt="sen forage" />
+			<a href="/home"><img src="${base}asset/logo_senForage.png" alt="sen forage" /></a>
 		</div>
 		<div class="menu">
-			<a href="">VILLAGE</a>
-			<a href="">CLIENT</a>
-			<a href="">DECONNEXION</a>
+			<a href="villages.pages">VILLAGE</a>
+			<a href="client.pages">CLIENT</a>
+			<a href="deconnex.connex">DECONNEXION</a>
 		</div>
 	</header>

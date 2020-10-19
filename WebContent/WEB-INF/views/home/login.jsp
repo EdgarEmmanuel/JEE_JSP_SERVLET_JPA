@@ -19,6 +19,11 @@
 			<form action="connex.connex" method="post">
 				<input type="text" placeholder="login" name="login" required/><br/><br/><br/>
 				<input type="password" placeholder="password" name="password" required/>
+				<label>ROLE</label>
+				<select required name="role">
+					<option>...</option>
+					<option value="administrateur">Administrateur</option>
+				</select>
 				<input type="submit" value="SE CONNECTER" />
 			</form>
 			<div class="message">
