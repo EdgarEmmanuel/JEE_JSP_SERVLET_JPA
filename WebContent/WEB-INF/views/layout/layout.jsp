@@ -4,7 +4,7 @@
 	</div>
 	<header>
 		<div class="brand">
-			<a href="/home"><img src="${base}asset/logo_senForage.png" alt="sen forage" /></a>
+			<a href="home.pages"><img src="${base}asset/logo_senForage.png" alt="sen forage" /></a>
 		</div>
 		<div class="menu">
 			<a href="villages.pages">VILLAGE</a>

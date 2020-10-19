@@ -30,15 +30,19 @@ public class HomeController extends HttpServlet {
 
 	@Override
 	public void init() throws ServletException {
-		em = EntityMana.getManager();
+		
 		iuser = new UserImpl();
 	}
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setAttribute("base", "http://localhost:8081/JEE_JSP_SERVLET_JPA/");
-		//req.setAttribute("villages",em.createQuery("SELECT c  FROM Village c").getResultList());
-		RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/home/login.jsp");
+		RequestDispatcher rd = null;
+		if(req.getServletPath().equalsIgnoreCase("/deconnex.connex")) {
+			rd = req.getRequestDispatcher("/WEB-INF/views/home/login.jsp");
+		}else {
+			rd = req.getRequestDispatcher("/WEB-INF/views/home/Home.jsp");
+		}
 		rd.forward(req, resp);
 	}
 	
