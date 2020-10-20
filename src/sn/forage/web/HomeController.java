@@ -36,14 +36,30 @@ public class HomeController extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setAttribute("base", "http://localhost:8081/JEE_JSP_SERVLET_JPA/");
-		RequestDispatcher rd = null;
-		if(req.getServletPath().equalsIgnoreCase("/deconnex.connex")) {
-			rd = req.getRequestDispatcher("/WEB-INF/views/home/login.jsp");
-		}else {
-			rd = req.getRequestDispatcher("/WEB-INF/views/home/login.jsp");
-		}
-		rd.forward(req, resp);
+			HttpSession session = req.getSession();
+			
+			req.setAttribute("base", "http://localhost:8081/JEE_JSP_SERVLET_JPA/");
+			if(req.getServletPath().equalsIgnoreCase("/deconnex.connex")) {
+				//clear the cche on logout
+				resp.setHeader("Cache-Control","no-cache");   
+			    resp.setHeader("Cache-Control","no-store");  
+			    resp.setDateHeader("Expires", 0);
+			    resp.setHeader("Pragma","no-cache"); 
+			    
+			    //clear session
+			    req.getSession().setAttribute("nom_admin",null);
+			    
+			    //redirect
+				//rd = req.getRequestDispatcher("/WEB-INF/views/home/login.jsp");
+			    session.invalidate();
+			    resp.sendRedirect("home");
+			}else {
+				RequestDispatcher rd = null;
+				rd = req.getRequestDispatcher("/WEB-INF/views/home/login.jsp");
+				rd.forward(req, resp);
+			}
+			
+		
 	}
 	
 	

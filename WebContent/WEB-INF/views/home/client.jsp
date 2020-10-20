@@ -22,9 +22,9 @@
 			<input type="text" placeholder="addresse" name="addresse" required /><br/>
 			<input type="text" placeholder="telephone" name="telephone" required /><br/>
 			<select  name="id_village"  required>
-			<c:forEach items="${villages}" var="village" >
-				<option value="${village.id}"><c:out value="${village.nom}"/></option>
-			</c:forEach>
+				<c:forEach items="${villages}" var="village" >
+					<option value="${village.id}"><c:out value="${village.nom}"/></option>
+				</c:forEach>
 			</select>
 			<div class="buttons">
 			<input type="submit" value="ENREGISTRER" /><input type="reset" value="ANNULER" />
