@@ -85,8 +85,13 @@ public class FormServlet extends HttpServlet {
 			if(val==1) {
 				session.setAttribute("message", "INSERTION CLIENT REUSSIE");
 			}else {
-				session.setAttribute("message", "ERREUR ! OUPS ");
+				session.setAttribute("message", "ERREUR ! OUPS ! REESSAYEZ PLUS TARD ");
 			}
+			
+			
+			RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/home/message.jsp");
+			rd.forward(req, resp);
+			
 		}
 		
 		

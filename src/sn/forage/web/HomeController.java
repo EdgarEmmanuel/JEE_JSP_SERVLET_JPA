@@ -41,7 +41,7 @@ public class HomeController extends HttpServlet {
 		if(req.getServletPath().equalsIgnoreCase("/deconnex.connex")) {
 			rd = req.getRequestDispatcher("/WEB-INF/views/home/login.jsp");
 		}else {
-			rd = req.getRequestDispatcher("/WEB-INF/views/home/Home.jsp");
+			rd = req.getRequestDispatcher("/WEB-INF/views/home/login.jsp");
 		}
 		rd.forward(req, resp);
 	}

@@ -15,17 +15,6 @@ public class Test {
 		
 		em.getTransaction().begin();
 		
-		User user = new User();
-		user.setEmail("admin@gmail.com");
-		user.setNom("seck");
-		user.setPasword("passer");
-		user.setPrenom("Seck");
-		user.setStatut(em.find(Statut.class, 1));
-		
-		
-		
-		em.persist(user);
-		
 		
 		
 		em.getTransaction().commit();

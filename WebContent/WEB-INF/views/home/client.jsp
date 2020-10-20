@@ -21,8 +21,7 @@
 			<input type="text" placeholder="prenom" name="prenom" required /><br/>
 			<input type="text" placeholder="addresse" name="addresse" required /><br/>
 			<input type="text" placeholder="telephone" name="telephone" required /><br/>
-			<input type="text" placeholder="village" required /><br/>
-			<select name="village" name="id_village"  required>
+			<select  name="id_village"  required>
 			<c:forEach items="${villages}" var="village" >
 				<option value="${village.id}"><c:out value="${village.nom}"/></option>
 			</c:forEach>

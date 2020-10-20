@@ -18,7 +18,7 @@ public class Client {
 	private String telephone;
 	private String adresse;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.REMOVE)
 	@JoinColumn(name = "id_village",referencedColumnName = "id")
 	private Village village;
 	
