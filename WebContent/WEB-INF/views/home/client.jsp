@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" href=<c:out value="${base}asset/favicon.ico"/> type="image/x-icon">
 <title>CLIENT | PAGE </title>
+<% if(session.getAttribute("nom_admin")==null){
+	response.sendRedirect("home");
+} %>
 </head>
 <body>
 	<jsp:include page="../layout/layout.jsp"></jsp:include>

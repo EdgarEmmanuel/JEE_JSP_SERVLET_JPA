@@ -9,9 +9,6 @@
 <link rel="shortcut icon" href=<c:out value="${base}asset/favicon.ico"/> type="image/x-icon">
 <link rel="icon" href=<c:out value="${base}asset/favicon.ico"/> type="image/x-icon">
 <title>LOGIN | PAGE </title>
-<% if(session.getAttribute("nom_admin")==null){
-	response.sendRedirect("home");
-} %>
 </head>
 <body>
 	<div class="body_tert">
